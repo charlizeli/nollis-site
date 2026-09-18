@@ -254,6 +254,7 @@ a { color: inherit; text-decoration: none; }
 }
 .result-icon {
   width: 265px;
+  max-width: 100%;
   height: auto;
   display: block;
   margin-bottom: 20px;
@@ -588,6 +589,8 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
   font-size: 13px;
   color: var(--ink-muted);
 }
@@ -595,6 +598,7 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
 }
 .footer-nav a:hover { color: var(--navy); }
 .footer-nav .dot { color: var(--ink-muted); }
@@ -618,4 +622,9 @@ a { color: inherit; text-decoration: none; }
   .key-ingredients-grid { grid-template-columns: repeat(2, 1fr); }
   .faq-grid { grid-template-columns: 1fr; gap: 24px; }
   .cta-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+}
+
+@media (max-width: 600px) {
+  .results-grid { grid-template-columns: 1fr; gap: 40px; }
+  .key-ingredients-grid { grid-template-columns: 1fr; }
 }
