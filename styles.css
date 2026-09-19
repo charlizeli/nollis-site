@@ -625,8 +625,8 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 860px) {
   .wrap { padding-left: 22px; padding-right: 22px; }
   .main-nav { display: none; }
-  .hero-grid { grid-template-columns: 1fr; min-height: unset; }
-  .hero-copy { padding: 0 0 40px; order: 2; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); min-height: unset; }
+  .hero-copy { padding: 40px 0; order: 2; min-width: 0; }
   .hero-media { order: 1; min-height: 0; aspect-ratio: 1 / 1; }
   .hero-copy h1 { font-size: 34px; }
   .opposites-grid { grid-template-columns: 1fr; gap: 32px; }
