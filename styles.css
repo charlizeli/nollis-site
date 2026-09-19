@@ -617,7 +617,7 @@ a { color: inherit; text-decoration: none; }
 /* responsive */
 @media (max-width: 860px) {
   .wrap { padding: 0 22px; }
-  .header-inner { padding-top: 28px; padding-bottom: 28px; }
+  .header-inner { padding-top: 16px; padding-bottom: 16px; }
   .main-nav { display: none; }
   .hero-grid { grid-template-columns: 1fr; min-height: unset; }
   .hero-copy { padding: 0 0 40px; order: 2; }
