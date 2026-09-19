@@ -175,6 +175,12 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.4;
   margin-bottom: 14px;
 }
+.opposites-col h3 .strike {
+  text-decoration: line-through;
+  text-decoration-color: #B9836F;
+  text-decoration-thickness: 1.5px;
+  color: #B9836F;
+}
 .opposites-col p {
   color: var(--ink-muted);
   font-size: 16px;
@@ -539,8 +545,8 @@ a { color: inherit; text-decoration: none; }
 }
 .faq-list details:first-child { padding-top: 0; }
 .faq-list summary {
-  font-family: var(--font-display);
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-weight: 500;
   font-size: 15px;
   cursor: pointer;
   list-style: none;
