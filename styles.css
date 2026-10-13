@@ -300,11 +300,25 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* how to use */
-.how-to-use { padding: 96px 0; background: #ffffff; }
+.how-to-use { padding: 0; background: var(--cream); }
 .how-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 80px;
+  align-items: center;
+}
+.how-media { min-width: 0; }
+.how-media img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+.how-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .how-copy h2 {
   font-size: 32px;
@@ -313,7 +327,7 @@ a { color: inherit; text-decoration: none; }
 }
 .how-lead {
   color: var(--ink-muted);
-  max-width: 32ch;
+  max-width: 480px;
 }
 .steps {
   list-style: none;
@@ -336,7 +350,7 @@ a { color: inherit; text-decoration: none; }
 .step-text { font-size: 15px; color: #4A6A8C; }
 
 /* key ingredients */
-.key-ingredients { padding-top: 96px; padding-bottom: 96px; }
+.key-ingredients { padding-top: 96px; padding-bottom: 96px; background: #ffffff; }
 .key-ingredients-head {
   max-width: 560px;
   margin-bottom: 40px;
@@ -386,7 +400,7 @@ a { color: inherit; text-decoration: none; }
   padding: 0;
 }
 .ki-card {
-  background: var(--cream-card);
+  background: var(--cream);
   padding: 16px;
   padding-top: 44px;
   border-radius: 10px;
@@ -421,7 +435,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* reviews */
-.reviews { padding: 96px 0; }
+.reviews { padding: 96px 0; background: #ffffff; }
 .reviews-head {
   display: flex;
   align-items: center;
@@ -490,7 +504,7 @@ a { color: inherit; text-decoration: none; }
   min-width: 0;
 }
 .review-card {
-  background: #ffffff;
+  background: var(--cream);
   padding: 28px 26px;
   border-radius: 10px;
   display: flex;
@@ -637,10 +651,12 @@ a { color: inherit; text-decoration: none; }
   .results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
   .reviews-slide { grid-template-columns: 1fr; gap: 16px; }
   .opposites-heading { font-size: 26px; }
-  .benefits-grid { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: minmax(0, 1fr); }
+  .benefit { min-width: 0; }
   .benefit { border-left: none; border-top: 1px solid rgba(236,230,215,0.14); }
   .benefit:first-child { border-top: none; }
-  .how-grid { grid-template-columns: 1fr; gap: 40px; }
+  .how-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .how-content { padding: 40px 0; }
   .key-ingredients-grid { grid-template-columns: repeat(2, 1fr); }
   .faq-grid { grid-template-columns: 1fr; gap: 24px; }
   .cta-inner { flex-direction: column; align-items: center; text-align: center; gap: 24px; padding: 64px 0; }
